@@ -1,0 +1,1 @@
+DrawIt.vba: call delete('/Users/admin/.vim_runtime/sources_forked/Drawlt//plugin/DrawItPlugin.vim')|call delete('/Users/admin/.vim_runtime/sources_forked/Drawlt//plugin/cecutil.vim')|call delete('/Users/admin/.vim_runtime/sources_forked/Drawlt//autoload/DrawIt.vim')|call delete('/Users/admin/.vim_runtime/sources_forked/Drawlt//doc/DrawIt.txt')
