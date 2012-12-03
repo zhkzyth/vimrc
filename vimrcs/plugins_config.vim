@@ -21,13 +21,11 @@ let g:bufExplorerFindActive=1
 let g:bufExplorerSortBy='name'
 map <leader>o :BufExplorer<cr>
 
-
 """"""""""""""""""""""""""""""
 " => MRU plugin
 """"""""""""""""""""""""""""""
 let MRU_Max_Entries = 400
-map <leader>f :MRU<CR>
-
+map <leader>f :MRU<cr>
 
 """"""""""""""""""""""""""""""
 " => YankRing
@@ -85,3 +83,10 @@ map <leader>nf :NERDTreeFind<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => surround.vim config
+" Annotate strings with gettext http://amix.dk/blog/post/19678
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:pydiction_location = '~/.vim_runtime/sources_non_forked/pydiction-1.2/complete-dict'

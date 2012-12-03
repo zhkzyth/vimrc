@@ -266,10 +266,11 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 map 0 ^
 
 " Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+" alt key doesn't work in my notebook=.=
+nmap <s-j> mz:m+<cr>`z
+nmap <s-k> mz:m-2<cr>`z
+vmap <s-j> :m'>+<cr>`<my`>mzgv`yo`z  "to understand it....
+vmap <s-k> :m'<-2<cr>`>my`<mzgv`yo`z "up
 
 if has("mac") || has("macunix")
   nmap <D-j> <M-j>
@@ -320,17 +321,18 @@ map <leader>n :cn<cr>
 map <leader>p :cp<cr>
 
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
+"map <leader>ss :setlocal spell!<cr>
 
 " Shortcuts using <leader>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
+"map <leader>sn ]s
+"map <leader>sp [s
+"map <leader>sa zg
+"map <leader>s? z=
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -350,6 +352,7 @@ map <leader>pp :setlocal paste!<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" to create a tmp menu
 function! CmdLine(str)
     exe "menu Foo.Bar :" . a:str
     emenu Foo.Bar
@@ -358,6 +361,7 @@ endfunction
 
 function! VisualSelection(direction, extra_filter) range
     let l:saved_reg = @"
+    "TODO what does vy mean??
     execute "normal! vgvy"
 
     let l:pattern = escape(@", '\\/.*$^~[]')
