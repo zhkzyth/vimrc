@@ -1,7 +1,20 @@
+>>>>>>> 708487e447a13f249633147d9f74c1f1982594f4,V
+ssh: connect to host 127.0.0.1 port 22: Connection refused,V
+=======>>>>>>> 708487e447a13f249633147d9f74c1f1982594f4,v
+,V
+<<<<<<< HEAD,V
+======="set scrolloff=3     " 光标移动到buffer的顶部和底部时保持3行距离  set novisualbell    " 不要闪烁(不明白)  set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "状态行显示的内容  set laststatus=2   " 启动显示状态行(1),总是显示状态行(2)  "set foldenable      " 允许折叠  set foldmethod=manual   " 手动折叠  "set background=dark "背景使用黑色 set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限  >>>>>>> 708487e447a13f249633147d9f74c1f1982594f4,v
+"set shortmess=atI   " 启动的时候不显示那个援助乌干达儿童的提示  ,V
+=======,V
+======,V
+<<<<<<< HEAD=,v
+"TODO dev a plugin for content shared btw vim instances....=======,v
+<<<<<<< HEAD=======,v
+======7a13f249633147d9f74c1f1982594f4,V
+="set autochdir "TODO dev a plugin for content shared btw vim instances....>>>>>>> 708487e44,v
 ighlight the brackets,V
 h,v
 ;,v
-,V
 ;; highlight brackets(require 'paren)(show-paren-mode 1),v
 ,v
 ')')')',V
@@ -85,16 +98,3 @@ https://github.com/zhkzyth/pyWebPromgramming.git,v
             print,V
        »,V
         »dd,V
-»,v
-      » ,V
-»       » »,v
-»»»»»»»»»»,v
-»»»»»»»»»»»print '\r%d bytes processed so far' % (n,),»sys.stdout.flush()printsc.close()print 'Completed processing'elif len(sys.argv) == 3 and sys.argv[1] == 'client' and sys.argv[2].isdigit():» bytes = (int(sys.argv[2]) + 15) // 16 * 16 # round up to // 16 » message = 'capitalize this!' # 16-byte message to repeat over and over» print 'Sending', bytes, 'bytes of data, in chunks of 16 bytes' » s.connect((HOST, PORT))» sent = 0 » while sent < bytes:  » »   » s.sendall(message)    » »     » sent += len(message)       »       print '\r%d bytes sent' % (sent,),      »      sys.stdout.flush()» print » s.shutdown(socket.SHUT_WR)» print 'Receiving all the data the server sends back'» received = 0 » while True:  » »   » data = s.recv(42)    » »     » if not received:      » »       » »        » print 'The first data received says', repr(data)          »          received += len(data)         »         if not data:        »        »        break       »       print '\r%d bytes received' % (received,),» s.close()else:»print >>sys.stderr, 'usage: tcp_deadlock.py server | client <bytes>',V
-5,v
-#!/usr/bin/env python# Foundations of Python Network Programming - Chapter 3 - tcp_deadlock.py# TCP client and server that leave too much data waitingimport socket, syss = socket.socket(socket.AF_INET, socket.SOCK_STREAM)HOST = '127.0.0.1'PORT = 1060if sys.argv[1:] == ['server']:»s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)»s.bind((HOST, PORT))»s.listen(1)»while True:»»print 'Listening at', s.getsockname()»»sc, sockname = s.accept()»»print 'Processing up to 1024 bytes at a time from', sockname»»n = 0»»while True:»»»message = sc.recv(1024)»»»if not message:»»»»break»»»sc.sendall(message.upper()) # send it back uppercase»»n += len(message),V
-reply = recv_all(s, 16)print 'The server said', repr(reply)s.close()else:»print >>sys.stderr, 'usage: tcp_local.py server|client [host]',V
-    time.sleep(5),V
-»»»»»»»»,v
-    PORT = int(sys.argv[2]) || PORT,V
-#!/usr/bin/env python# Foundations of Python Network Programming - Chapter 3 - tcp_sixteen.py# Simple TCP client and server that send and receive 16 octetsimport socket, syss = socket.socket(socket.AF_INET, socket.SOCK_STREAM)HOST = sys.argv.pop() if len(sys.argv) == 3 else '127.0.0.1'PORT = 1060def»»»»»»»»recv_all(sock, length):data = ''while len(data) < length:»more = sock.recv(length - len(data))»if not more:»»raise EOFError('socket closed %d bytes into a %d-byte message'»»% (len(data), length))»data += morereturn dataif sys.argv[1:] == ['server']:»s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)»s.bind((HOST, PORT))»s.listen(1)»while True:»»print 'Listening at', s.getsockname()»»sc, sockname = s.accept()»»print 'We have accepted a connection from', sockname»»print 'Socket connects', sc.getsockname(), 'and', sc.getpeername()»message = recv_all(sc, 16)»»»print 'The incoming sixteen-octet message says', repr(message)»»sc.sendall('Farewell, client')»»sc.close()»»print 'Reply sent, socket closed'elif sys.argv[1:] == ['client']:»s.connect((HOST, PORT))»print 'Client has been assigned socket name', s.getsockname()»s.sendall('Hi there, server'),V
-    PORT = int(sys.argv[2]) || PORT,v
