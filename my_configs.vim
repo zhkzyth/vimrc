@@ -86,6 +86,8 @@ set noeb
 set confirm
 " auto change the working directories
 set autochdir
+"opens a file with the current working dir
+map <leader>e :e <C-R>=expand("%:p:h")."/"<CR>
 
 
 "tab pref
