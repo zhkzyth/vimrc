@@ -110,7 +110,7 @@ set history=1000
 "search pref
 "==========
 "搜索忽略大小写
-set ignorecase
+set ignorecase smartcase
 "搜索逐字符高亮
 set hlsearch
 set incsearch
@@ -145,9 +145,9 @@ set autoindent
 "自动补全 括号匹配
 inoremap ( ()<ESC>i
 inoremap ) <c-r>=ClosePair(')')<CR>
-inoremap { {<CR>}<ESC>O  
+"inoremap { {<CR>}<ESC>O  
 "according to the file type to add <CR>
-"inoremap { {}<ESC>i
+inoremap { {}<ESC>i
 inoremap } <c-r>=ClosePair('}')<CR>
 inoremap [ []<ESC>i
 inoremap ] <c-r>=ClosePair(']')<CR>
@@ -220,10 +220,20 @@ map <C-x> :BufExplorer<cr>
 map <F1> :NERDTreeToggle<cr>
 
 "TODO modify nerdcommenter and make it more suitable.
-map <leader>/ <leader>c<space>
+"map <leader>/ <leader>c<space>
 
 "TODO dev a plugin for content shared btw vim instances...
 
 "TODO add more api here
 "tmp overite the mapping for Yanking.
-autocmd VimEnter * map <C-P> :FufFile<CR>
+"autocmd VimEnter * map <C-P> :FufFile<CR>
+"hack,dont where such setting has been overide!
+autocmd VimEnter * set ignorecase smartcase
+
+"TODO shortcuts for the filefinder
+"nmap <leader>f :FF<CR>
+
+"TODO for the fucking awesome command-T 
+let g:CommandTMaxCachedDirectories=0
+let g:CommandTMatchWindowAtTop=0
+
