@@ -1,0 +1,11 @@
+[submodule "command-t"]
+   path = sources_non_forked/command-t
+   url  = https://github.com/zhkzyth/Command-T.git
+
+[submodule "lusty"]
+   path = sources_non_forked/lusty
+   url  =  https://github.com/sjbach/lusty.git
+
+[submodule "nerdcommenter"]
+   path = sources_non_forked/nerdcommenter
+   url  = https://github.com/scrooloose/nerdcommenter.git
