@@ -84,27 +84,25 @@ set autowrite
 set noeb
 " 在处理未保存或只读文件的时候，弹出确认
 set confirm
-" auto change the working directories
-set autochdir
+" not auto change the working directories
+set noautochdir
 "opens a file with the current working dir
 map <leader>e :e <C-R>=expand("%:p:h")."/"<CR>
 
 
 "tab pref
 "========
-" Tab键的宽度
-set tabstop=1
-" 统一缩进为4
-"set softtabstop=3
-"set shiftwidth=3
-" 不要用空格代替制表符
-"set noexpandtab
-" 在行和段开始处使用制表符
-"set smarttab
+set expandtab       "Use softtabstop spaces instead of tab characters for indentation
+set shiftwidth=3    "Indent by 4 spaces when using >>, <<, == etc.
+set softtabstop=3   "Indent by 4 spaces when pressing <TAB>
+
+set autoindent      "Keep indentation from previous line
+set smartindent     "Automatically inserts indentation in some cases
+set cindent         "Like smartindent, but stricter and more customisable""""""
+
 " 历史记录数
 set history=1000
-" 使回格键（backspace）正常处理indent, eol, start等
-"set backspace=2
+
 
 
 "search pref
@@ -220,7 +218,7 @@ map <C-x> :BufExplorer<cr>
 map <F1> :NERDTreeToggle<cr>
 
 "TODO modify nerdcommenter and make it more suitable.
-"map <leader>/ <leader>c<space>
+autocmd VimEnter * map <leader>/ <leader>c<space>
 
 "TODO dev a plugin for content shared btw vim instances...
 
@@ -229,6 +227,7 @@ map <F1> :NERDTreeToggle<cr>
 "autocmd VimEnter * map <C-P> :FufFile<CR>
 "hack,dont where such setting has been overide!
 autocmd VimEnter * set ignorecase smartcase
+autocmd VimEnter * set noautochdir
 
 "TODO shortcuts for the filefinder
 "nmap <leader>f :FF<CR>
@@ -236,4 +235,9 @@ autocmd VimEnter * set ignorecase smartcase
 "TODO for the fucking awesome command-T 
 let g:CommandTMaxCachedDirectories=0
 let g:CommandTMatchWindowAtTop=0
+
+"TODO correct the filetype
+au FileType javascript setl foldmethod=indent
+
+"TODO shortcut for lucyfilefinder
 
