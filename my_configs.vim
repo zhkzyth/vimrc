@@ -241,3 +241,5 @@ au FileType javascript setl foldmethod=indent
 
 "TODO shortcut for lucyfilefinder
 
+"TODO tmp hack the filetype foldmethod
+
