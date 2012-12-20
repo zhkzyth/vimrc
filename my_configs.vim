@@ -85,7 +85,8 @@ set noeb
 " 在处理未保存或只读文件的时候，弹出确认
 set confirm
 " not auto change the working directories
-set noautochdir
+" default should be off
+" set noautochdir
 "opens a file with the current working dir
 map <leader>e :e <C-R>=expand("%:p:h")."/"<CR>
 
@@ -227,7 +228,8 @@ autocmd VimEnter * map <leader>/ <leader>c<space>
 "autocmd VimEnter * map <C-P> :FufFile<CR>
 "hack,dont where such setting has been overide!
 autocmd VimEnter * set ignorecase smartcase
-autocmd VimEnter * set noautochdir
+"autocmd VimEnter * set noautochdir
+"autocmd BufEnter * set noautochdir
 
 "TODO shortcuts for the filefinder
 "nmap <leader>f :FF<CR>
