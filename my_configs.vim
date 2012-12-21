@@ -245,3 +245,13 @@ au FileType javascript setl foldmethod=indent
 
 "TODO tmp hack the filetype foldmethod
 
+
+" combine omni plugin with autocomplete
+let g:AutoComplPop_Behavior = { 
+         \'c': [ {'command' : "\<C-x>\<C-o>",
+         \'pattern' : ".",
+         \'repeat' : 0}
+         \]}
+
+" combine acp and snipmate
+let g:acp_behaviorSnipmateLength=1
