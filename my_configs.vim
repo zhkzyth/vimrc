@@ -198,7 +198,7 @@ vnoremap < <gv
 
 " CTags pre
 "默认打开Taglist 
-let Tlist_Auto_Open=1 
+let Tlist_Auto_Open=0
 let Tlist_Ctags_Cmd = '/usr/bin/ctags' 
 let Tlist_Sort_Type = "name"    " 按照名称排序  
 let Tlist_Use_Right_Window = 1  " 在右侧显示窗口  
@@ -209,6 +209,8 @@ let Tlist_Enable_Fold_Column = 0    " 不要显示折叠树
 "autocmd FileType java set tags+=D:\tools\java\tags  
 "autocmd FileType h,cpp,cc,c set tags+=D:\tools\cpp\tags  
 let Tlist_Show_One_File=1            "不同时显示多个文件的tag，只显示当前文件的
+
+map <F2> :Tlist<cr>
 
 "BufExplorer
 map <C-x> :BufExplorer<cr>
@@ -255,3 +257,6 @@ au FileType javascript setl foldmethod=indent
 
 " combine acp and snipmate
 "let g:acp_behaviorSnipmateLength=1
+
+" TODO for the tagbar   
+map <F3> :TagbarToggle<cr>
