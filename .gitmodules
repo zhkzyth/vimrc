@@ -9,3 +9,6 @@
 [submodule "nerdcommenter"]
    path = sources_non_forked/nerdcommenter
    url  = https://github.com/scrooloose/nerdcommenter.git
+[submodule "sources_forked/command-t"]
+	path = sources_forked/command-t
+	url = git://git.wincent.com/command-t.git

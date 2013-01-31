@@ -73,7 +73,9 @@ set guioptions-=m           " 隐藏菜单栏
 set completeopt=preview,menu 
 
 "共享剪贴板  
-set clipboard=unnamedplus
+set clipboard=unnamed
+"set clipboard=unnamedplus
+
 "从不备份  
 set nobackup
 ""禁止生成临时文件
@@ -260,3 +262,26 @@ au FileType javascript setl foldmethod=indent
 
 " TODO for the tagbar   
 map <F3> :TagbarToggle<cr>
+
+
+"add the alpha support
+"au GUIEnter * call libcallnr("vimtweak.dll", "SetAlpha", 234)
+"几个更改alpha的快捷键
+"map <M-8> <Esc>:call libcallnr("vimtweak.dll", "SetAlpha", 180) <CR>
+"map <M-9> <Esc>:call libcallnr("vimtweak.dll", "SetAlpha", 230) <CR>
+"map <M-0> <ESC>:call libcallnr("vimtweak.dll", "SetAlpha", 255) <CR>
+
+
+"temp hack the clipboard
+"TODO upgrade the vim version
+nnoremap <C-c> "+y
+vnoremap <C-c> "+y
+nnoremap <C-p> "+gP
+vnoremap <C-p> "+gP
+
+
+" resize current buffer by +/- 5 
+nnoremap <C-left> :vertical resize -5<cr>
+nnoremap <C-down> :resize +5<cr>
+nnoremap <C-up> :resize -5<cr>
+nnoremap <C-right> :vertical resize +5<cr>
