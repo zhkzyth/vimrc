@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/zhkzyth/codeRep/goagent'
 let g:netrw_dirhist_2='/home/zhkzyth/.vim_runtime/sources_non_forked/ack.vim'
 let g:netrw_dirhist_3='/mnt/D/TDDOWNLOAD/fcitx-4.2.2/cmake'
 let g:netrw_dirhist_4='/home/zhkzyth/.vim_runtime'
+let g:netrw_dirhist_5='/home/zhkzyth/.vim_runtime/vimrcs'
