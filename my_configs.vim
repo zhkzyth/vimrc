@@ -15,6 +15,7 @@ set shortmess=atI   " 启动的时候不显示那个援助乌干达儿童的提�
 "set lines=40 columns=155    " 设定窗口大小  
 set nu              " 显示行号  
 set go=             " 不要图形按钮  
+
 "color asmanian2     " 设置背景主题  
 "set guifont=Courier_New:h10:cANSI   " 设置字体  
 syntax on           " 语法高亮  
@@ -24,6 +25,10 @@ set ruler           " 显示标尺
 set showcmd         " 输入的命令显示出来，看的清楚些  
 "set cmdheight=1     " 命令行（在状态行下）的高度，设置为1  
 "set whichwrap+=<,>,h,l   " 允许backspace和光标键跨越行边界(不建议)  
+
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
 
 set scrolloff=3     " 光标移动到buffer的顶部和底部时保持3行距离  
 set novisualbell    " 不要闪烁(不明白)  
@@ -309,3 +314,5 @@ endfunction
 
 nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
 nmap <silent> <leader>pw :call DoWindowSwap()<CR>
+
+
