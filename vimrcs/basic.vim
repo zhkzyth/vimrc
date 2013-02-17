@@ -132,7 +132,6 @@ set foldcolumn=1
 syntax enable 
 
 try
-    colorscheme desert
 catch
 endtry
 
