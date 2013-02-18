@@ -44,8 +44,6 @@ set foldmethod=indent   "[indent,manual,....]
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
-"set background=dark "背景使用黑色 
-
 " 显示中文帮助
 if version >= 603
    set helplang=cn
