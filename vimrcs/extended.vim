@@ -12,11 +12,9 @@
 if has("gui_running")
     colorscheme peaksea
 else
-    "colorscheme desert
-    "if $COLORTERM == 'gnome-terminal'
-      set t_Co=256
-    "endif
-    colorscheme koehler
+    colorscheme desert
+    "colorscheme koehler
+    set t_Co=256
 endif
 
 "make the background transparent
