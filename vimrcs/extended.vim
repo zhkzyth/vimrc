@@ -8,11 +8,20 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 if has("gui_running")
     colorscheme peaksea
 else
-    colorscheme desert
+    "colorscheme desert
+    "if $COLORTERM == 'gnome-terminal'
+      set t_Co=256
+    "endif
+    colorscheme koehler
 endif
+
+"make the background transparent
+hi Normal ctermbg=NONE
+
 
 " Set font according to system
 if has("mac") || has("macunix")
