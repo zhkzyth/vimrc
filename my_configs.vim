@@ -52,6 +52,7 @@ endif
 
 " 设置配色方案
 "colorscheme murphy
+
 "字体 
 "if (has("gui_running")) 
 "   set guifont=Bitstream\ Vera\ Sans\ Mono\ 10 

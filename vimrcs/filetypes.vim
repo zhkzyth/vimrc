@@ -19,6 +19,21 @@ au FileType python map <buffer> <leader>C ?class
 au FileType python map <buffer> <leader>D ?def 
 au FileType python setl sw=4 sts=4
 
+" TEMPLATES
+function! LoadTemplate()
+    " load a template based on the file extension
+    silent! 0r ~/.vim_runtime/skel/tmpl.%:e
+
+    " Replace some placeholders
+    %s/%FILENAME%/\=expand("%:t")/g
+    %s/%DATE%/\=strftime("%b %d, %Y")/g
+
+    " This last one deletes the placeholder
+    " %START% then leaves the cursor there.
+    %s/%START%//g
+endfunction
+autocmd! BufNewFile *.py call LoadTemplate()
+
 """"""""""""""""""""""""""""""
 " => JavaScript section
 """""""""""""""""""""""""""""""
