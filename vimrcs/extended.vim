@@ -9,18 +9,6 @@
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if has("gui_running")
-    colorscheme peaksea
-else
-    colorscheme desert
-    "colorscheme koehler
-    set t_Co=256
-endif
-
-"make the background transparent
-hi Normal ctermbg=NONE
-
-
 " Set font according to system
 if has("mac") || has("macunix")
     set gfn=Menlo:h14

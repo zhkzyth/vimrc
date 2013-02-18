@@ -139,7 +139,6 @@ set scrolloff=3
 set smartindent
 " 自动缩进
 set autoindent
-"set cindent
 
 "自动补全 括号匹配
 inoremap ( ()<ESC>i
@@ -309,3 +308,14 @@ nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
 nmap <silent> <leader>pw :call DoWindowSwap()<CR>
 
 
+"TODO find out the conflict
+if has("gui_running")
+    colorscheme peaksea
+else
+    colorscheme desert
+    set t_Co=256
+    "colorscheme koehler
+endif
+
+"make the background transparent
+hi Normal ctermbg=NONE ctermfg=252 
