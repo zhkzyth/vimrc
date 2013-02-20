@@ -90,3 +90,10 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 " Annotate strings with gettext http://amix.dk/blog/post/19678
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:pydiction_location = '~/.vim_runtime/sources_non_forked/pydiction-1.2/complete-dict'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => stackoverflow cli plugin
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap ,st :ConqueTermVSplit python   /home/zhkzyth/.vim_runtime/sources_non_forked/stackoverflow/stackoverflow_cli_search.py
+nmap cp :ConqueTermVSplit python
+nmap ,g :ConqueTermVSplit python    /home/zhkzyth/.vim_runtime/sources_non_forked/stackoverflow/git_search.py
