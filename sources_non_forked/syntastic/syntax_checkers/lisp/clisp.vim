@@ -9,22 +9,22 @@
 "             See http://sam.zoy.org/wtfpl/COPYING for more details.
 "
 "============================================================================
-function! SyntaxCheckers_lisp_clisp_IsAvailable()
-    return executable("clisp")
-endfunction
+"function! SyntaxCheckers_lisp_clisp_IsAvailable()
+    "return executable("clisp")
+"endfunction
 
-function! SyntaxCheckers_lisp_clisp_GetLocList()
-    let makeprg = syntastic#makeprg#build({
-                \ 'exe': 'clisp',
-                \ 'args': '-c'
-                \ 'tail': '-o /tmp/clisp-vim-compiled-file' })
-    let efm  = '%-G;%.%#,'
-    let efm .= '%W%>WARNING:%.%#line %l : %m,%C  %#%m,'
-    let efm .= '%E%>The following functions were %m,%Z %m,'
-    let efm .= '%-G%.%#'
-    return SyntasticMake({ 'makeprg': makeprg, 'errorformat': efm })
-endfunction
+"function! SyntaxCheckers_lisp_clisp_GetLocList()
+    "let makeprg = syntastic#makeprg#build({
+                "\ 'exe': 'clisp',
+                "\ 'args': '-c'
+                "\ 'tail': '-o /tmp/clisp-vim-compiled-file' })
+    "let efm  = '%-G;%.%#,'
+    "let efm .= '%W%>WARNING:%.%#line %l : %m,%C  %#%m,'
+    "let efm .= '%E%>The following functions were %m,%Z %m,'
+    "let efm .= '%-G%.%#'
+    "return SyntasticMake({ 'makeprg': makeprg, 'errorformat': efm })
+"endfunction
 
-call g:SyntasticRegistry.CreateAndRegisterChecker({
-    \ 'filetype': 'lisp',
-    \ 'name': 'clisp'})
+"call g:SyntasticRegistry.CreateAndRegisterChecker({
+    "\ 'filetype': 'lisp',
+    "\ 'name': 'clisp'})
