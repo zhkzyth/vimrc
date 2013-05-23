@@ -72,7 +72,9 @@ set completeopt=preview,menu
 
 "共享剪贴板  
 set clipboard=unnamed
-"set clipboard=unnamedplus
+"not work as expect,so i use pbcopy&paste
+map <F7> :.w !pbcopy<CR><CR>
+map <F6> :r !pbpaste<CR>
 
 "从不备份  
 set nobackup
@@ -319,3 +321,5 @@ endif
 
 "make the background transparent
 hi Normal ctermbg=NONE ctermfg=252 
+
+
