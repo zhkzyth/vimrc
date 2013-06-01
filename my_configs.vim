@@ -11,21 +11,14 @@ set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本�
 " 显示相关  
 "=======
 set shortmess=atI   " 启动的时候不显示那个援助乌干达儿童的提示  
-"winpos 5 5          " 设定窗口位置  
-"set lines=40 columns=155    " 设定窗口大小  
 set nu              " 显示行号  
 set go=             " 不要图形按钮  
 
-"set guifont=Courier_New:h10:cANSI   " 设置字体  
 syntax on           " 语法高亮  
 autocmd InsertLeave * se nocul  " 用浅色高亮当前行  
 autocmd InsertEnter * se cul    " 用浅色高亮当前行  
 set ruler           " 显示标尺  
 set showcmd         " 输入的命令显示出来，看的清楚些  
-"set cmdheight=1     " 命令行（在状态行下）的高度，设置为1  
-"set whichwrap+=<,>,h,l   " 允许backspace和光标键跨越行边界(不建议)  
-
-
 
 set scrolloff=3     " 光标移动到buffer的顶部和底部时保持3行距离  
 set novisualbell    " 不要闪烁(不明白)  
@@ -73,8 +66,11 @@ set completeopt=preview,menu
 "共享剪贴板  
 set clipboard=unnamed
 "not work as expect,so i use pbcopy&paste
-map <F7> :.w !pbcopy<CR><CR>
-map <F6> :r !pbpaste<CR>
+map <F6> :.w !pbcopy<CR><CR>
+map <F7> :r !pbpaste<CR>
+"tmp hack vim share
+vmap y :w !pbcopy<CR><CR>
+
 
 "从不备份  
 set nobackup
@@ -280,10 +276,10 @@ vnoremap <C-p> "+gP
 
 
 " resize current buffer by +/- 5 
-nnoremap <C-left> :vertical resize -5<cr>
-nnoremap <C-down> :resize +5<cr>
-nnoremap <C-up> :resize -5<cr>
-nnoremap <C-right> :vertical resize +5<cr>
+nnoremap <S-left> :vertical resize -5<cr>
+nnoremap <S-down> :resize +5<cr>
+nnoremap <S-up> :resize -5<cr>
+nnoremap <S-right> :vertical resize +5<cr>
 
 
 "swap the window
