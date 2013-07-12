@@ -1,15 +1,7 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Important: 
-"       This requries that you install https://github.com/amix/vimrc !
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
 call pathogen#infect('~/.vim_runtime/sources_forked')
-call pathogen#infect('~/.vim_runtime/sources_non_forked')
 call pathogen#helptags()
 
 """"""""""""""""""""""""""""""
@@ -28,16 +20,6 @@ let MRU_Max_Entries = 400
 map <leader>f :MRU<cr>
 
 """"""""""""""""""""""""""""""
-" => YankRing
-""""""""""""""""""""""""""""""
-if has("win16") || has("win32")
-    " Don't do anything
-else
-    let g:yankring_history_dir = '~/.vim_runtime/temp_dirs/'
-endif
-
-
-""""""""""""""""""""""""""""""
 " => CTRL-P
 """"""""""""""""""""""""""""""
 let g:ctrlp_working_path_mode = 0
@@ -47,12 +29,6 @@ map <c-b> :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
-
-
-""""""""""""""""""""""""""""""
-" => Peepopen
-""""""""""""""""""""""""""""""
-map <leader>j :PeepOpen<cr>
 
 
 """"""""""""""""""""""""""""""

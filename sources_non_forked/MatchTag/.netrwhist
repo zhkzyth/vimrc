@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/zhkzyth/codeRep/aralejs/mootools-core/Docs'
-let g:netrw_dirhist_2='/home/zhkzyth/.emacs'
-let g:netrw_dirhist_3='/home/zhkzyth/.emacs.d/emacs.d'
-let g:netrw_dirhist_4='/etc/default'
-let g:netrw_dirhist_5='/home/zhkzyth/.vim_runtime'
