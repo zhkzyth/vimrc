@@ -42,7 +42,7 @@ if version >= 603
 endif
 
 "set the encode proto
-set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
+set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,shift-jis
 set termencoding=utf-8
 set encoding=utf-8
 
@@ -199,3 +199,6 @@ autocmd FileType html inoremap {% {%<space><space><space>%}<LEFT><LEFT><LEFT><LE
 
 "TODO correct the filetype
 au FileType javascript setl foldmethod=indent
+
+"
+autocmd FileType python map <buffer> <F4> :call Flake8()<CR>

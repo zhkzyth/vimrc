@@ -25,12 +25,12 @@ function! LoadTemplate()
     silent! 0r ~/.vim_runtime/skel/tmpl.%:e
 
     " Replace some placeholders
-    %s/%FILENAME%/\=expand("%:t")/g
-    %s/%DATE%/\=strftime("%b %d, %Y")/g
+    "%s/%FILENAME%/\=expand("%:t")/g
+    "%s/%DATE%/\=strftime("%b %d, %Y")/g
 
     " This last one deletes the placeholder
     " %START% then leaves the cursor there.
-    %s/%START%//g
+    "%s/%START%//g
 endfunction
 autocmd! BufNewFile *.py call LoadTemplate()
 
@@ -67,3 +67,15 @@ function! CoffeeScriptFold()
     setl foldlevelstart=1
 endfunction
 au FileType coffee call CoffeeScriptFold()
+
+
+""""""""""""""""""""""""""""""
+" => C section
+"""""""""""""""""""""""""""""""
+autocmd! BufNewFile *.c call LoadTemplate()
+
+
+""""""""""""""""""""""""""""""
+" => C++ section
+"""""""""""""""""""""""""""""""
+"autocmd! BufNewFile *.c call LoadTemplate()
