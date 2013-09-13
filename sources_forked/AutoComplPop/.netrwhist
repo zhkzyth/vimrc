@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Volumes/disk/codeIn/hello-rails/config'
-let g:netrw_dirhist_2='/Volumes/disk/codeIn/canteen/canteen'
-let g:netrw_dirhist_3='/Volumes/disk/codeIn/hello-rails/config'
-let g:netrw_dirhist_4='/Volumes/disk/codeIn/pythonTrain/static'
-let g:netrw_dirhist_5='/Volumes/disk/codeIn/175game/weblogic-git/webgame-agent/src/matrix/extras'
-let g:netrw_dirhist_6='/Users/admin/public'
-let g:netrw_dirhist_7='/Users/admin/.vim_runtime/sources_forked/syntastic/plugin/syntastic'
-let g:netrw_dirhist_8='/Volumes/disk/codeIn/175game/weblogic-git/webgame-agent/src/matrix/src/handlers'
-let g:netrw_dirhist_9='/Users/admin/Downloads/tmp/LICENSE'
+let g:netrw_dirhist_cnt =0

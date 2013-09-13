@@ -79,3 +79,8 @@ autocmd! BufNewFile *.c call LoadTemplate()
 " => C++ section
 """""""""""""""""""""""""""""""
 "autocmd! BufNewFile *.c call LoadTemplate()
+
+""""""""""""""""""""""""""""""
+" => Shell section
+"""""""""""""""""""""""""""""""
+autocmd! BufNewFile *.sh call LoadTemplate()

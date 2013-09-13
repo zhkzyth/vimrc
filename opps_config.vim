@@ -202,3 +202,6 @@ au FileType javascript setl foldmethod=indent
 
 "
 autocmd FileType python map <buffer> <F4> :call Flake8()<CR>
+
+"NERDTree options
+let NERDTreeIgnore = ['\.pyc$','\.o$']
