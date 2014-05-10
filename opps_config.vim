@@ -57,8 +57,8 @@ set completeopt=preview,menu
 "share the clipboard
 set clipboard=unnamed
 "not work as expect,so i use pbcopy&paste
-map <F6> :w !pbcopy<CR><CR>
-map <F7> :r !pbpaste<CR>
+map <F4> :w !pbcopy<CR><CR>
+map <F6> :r !pbpaste<CR><CR>
 "never back up
 set nobackup
 "auto save
